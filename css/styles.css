@@ -150,7 +150,6 @@ main {margin: 30px;}
 .index-header img:hover {
     transition: .3s;
     transform: scale(105%);
-
 }
 
 .index-header p {
@@ -164,6 +163,13 @@ main {margin: 30px;}
     justify-content: center;
     align-items: center;
 }
+
+/* RESPONZIVITA */
+@media (max-width: 600px) {
+    .index-header img {display: none;}
+    .index-header p {width: 65vw;}
+}
+
 
 
 /*
