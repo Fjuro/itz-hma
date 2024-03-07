@@ -1,16 +1,47 @@
 /* Písma */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-* {
-    margin: 0;
-}
-body {
-    font-family: "Open Sans", sans-serif;
-}
-main {
-    margin: 30px;
+* {margin: 0;}
+body {font-family: "Open Sans", sans-serif;}
+main {margin: 30px;}
+
+
+
+/*
+ * ROZVRŽENÍ
+ */
+
+
+/* BLOK */
+.block {display: block;}
+
+/* KONTEJNER */
+.container {
+    /* ... */
 }
 
+/* SLOUPEC */
+@media (min-width: 600px) {
+    .col {
+        float: left;
+        width: 50%;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/*
+ * TEXT
+ */
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+.text-justify {text-align: justify;}
 
 
 /*
@@ -39,29 +70,6 @@ main {
     transition: .1s;
 }
 
-
-
-/*
- * ROZVRŽENÍ
- */
-
-/* KONTEJNER */
-.container {
-    /* ... */
-}
-
-/* SLOUPEC */
-@media (min-width: 600px) {
-    .col {
-        float: left;
-        width: 50%;
-    }
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
 
 
 /*
@@ -98,9 +106,7 @@ main {
     text-decoration: none !important;
 }
 
-.navbar .menu-btn {
-    display: none;
-}
+.navbar .menu-btn {display: none;}
 
 /* RESPONZIVITA */
 @media (max-width: 600px) {
@@ -126,6 +132,41 @@ main {
 
 
 /*
+ * DOMOVSKÁ STRÁNKA
+ */
+
+.index-header {
+    padding: 30px 80px;
+    background-color: rgba(255,13,5,0.07);
+    border-radius: 20px;
+}
+
+.index-header img {
+    width: 100%;
+    border-radius: 20px;
+    transition: .3s;
+    overflow: hidden;
+}
+.index-header img:hover {
+    transition: .3s;
+    transform: scale(105%);
+
+}
+
+.index-header p {
+    padding: 15px 0;
+    width: 80%;
+}
+
+.col-left {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
  * STAVBY
  */
 
@@ -148,17 +189,11 @@ main {
     text-align: justify;
 }
 
-.content h2 {
-    padding-bottom: 10px;
-}
+.content h2 {padding-bottom: 10px;}
 
-.content .architect {
-    padding-bottom: 15px;
-}
+.content .architect {padding-bottom: 15px;}
 
-.content img {
-    width: 95%;
-}
+.content img {width: 95%;}
 
 
 
@@ -166,28 +201,18 @@ main {
  * FOTOGALERIE
  */
 
-.gallery {
-    margin-top: 15px;
-}
+.gallery {margin-top: 15px;}
 
-.gallery a {
-    text-decoration: none;
-}
+.gallery a {text-decoration: none;}
 
-.gallery img {
-    height: 200px;
-}
+.gallery img {height: 200px;}
 
 /* RESPONZIVITA */
 @media (max-width: 600px) {
-    .gallery {
-        text-align: center;
-    }
+    .gallery {text-align: center;}
     .gallery img {
         height: auto;
         width: 95%;
     }
-    .gallery-header {
-        text-align: center;
-    }
+    .gallery-header {text-align: center;}
 }

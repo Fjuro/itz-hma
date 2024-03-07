@@ -5,7 +5,7 @@
     <title>Moderní architektura</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="css/lightgallery/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -28,16 +28,31 @@
 <!-- MAIN -->
 <main>
 
-    <h1>Moderní architektura v Humpolci</h1>
-    <p>Vítejte na stránkách o současné architektuře v Humpolci.</p>
-    <a href="#" class="btn">Tlačítko</a>
-    <br>
-    <img style="width: 30%;" src="img/obrazek.jpg" alt="Obrázek">
+    <div class="index-header">
+        <div class="row">
+            <div class="col col-left">
+                <div class="block">
+                    <h1>Moderní architektura v Humpolci</h1>
+                    <p class="text-justify">
+                        Vítejte na stránkách o současné architektuře v Humpolci.
+                        Tyto stránky se věnují detailnímu zmapování architektury minulého a současného století na území města Humpolce.
+                        Na stránce Stavby naleznete detailní přehled všech staveb.
+                        Na stránce Fotogalerie naleznete vlastní fotografie všech staveb.
+                    </p>
+                    <a href="#" class="btn">Tlačítko</a>
+                </div>
+            </div>
+            <div class="col col-right" id="lightgallery">
+                <a href="img/obrazek.jpg" data-lg-size="4032-2268">
+                    <img src="img/obrazek.jpg" alt="Obrázek (placeholder)">
+                </a>
+            </div>
+        </div>
+    </div>
+
 
     <p style="text-align: justify">
-        Tyto stránky se věnují detailnímu zmapování architektury minulého a současného století na území města Humpolce.
-        Na stránce Stavby naleznete detailní přehled všech staveb.
-        Na stránce Fotogalerie naleznete vlastní fotografie všech staveb.
+
     </p>
 
 </main>
@@ -47,4 +62,15 @@
 <script src="js/scripts.js"></script>
 <script src="js/fontawesome.js"></script>
 <script src="js/lightgallery/bundle.js"></script>
+<script src="js/lightgallery/zoom.js"></script>
+<script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom],
+        speed: 500,
+        getCaptionFromTitleOrAlt: true,
+        download: true,
+        hideScrollbar: true,
+        mode: 'lg-slide'
+    });
+</script>
 </html>
