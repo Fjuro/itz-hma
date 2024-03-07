@@ -5,7 +5,7 @@
     <title>Moderní architektura</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="css/lightgallery/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -30,7 +30,21 @@
 
     <h1>Fotogalerie</h1>
 
-    Zde se bude nacházet fotogalerie.
+    <div class="gallery" id="lightgallery">
+        <a href="img/galerie/helenka-1.jpg" data-lg-size="4000-3000">
+            <img src="img/galerie/helenka-1.jpg" alt="Vila Helenka">
+        </a>
+        <a href="img/obrazek.jpg" data-lg-size="4032-2268">
+            <img src="img/obrazek.jpg" alt="Placeholder">
+        </a>
+
+
+        <!--
+        <a href="img/galerie/" data-lg-size="4000-3000">
+        <img src="img/galerie/" alt="">
+        </a>
+        -->
+    </div>
 
 </main>
 <!-- / MAIN -->
@@ -39,4 +53,15 @@
 <script src="js/scripts.js"></script>
 <script src="js/fontawesome.js"></script>
 <script src="js/lightgallery/bundle.js"></script>
+<script src="js/lightgallery/zoom.js"></script>
+<script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom],
+        speed: 500,
+        getCaptionFromTitleOrAlt: true,
+        download: true,
+        hideScrollbar: true,
+        mode: 'lg-slide'
+    });
+</script>
 </html>

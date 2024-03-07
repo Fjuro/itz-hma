@@ -1,4 +1,5 @@
-@import url('https://api.fonts.coollabs.io/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); /* Písma */
+/* Písma */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
     margin: 0;
@@ -157,4 +158,22 @@ main {
 
 .content img {
     width: 95%;
+}
+
+
+
+/*
+ * FOTOGALERIE
+ */
+
+.gallery {
+    margin-top: 15px;
+}
+
+.gallery a {
+    text-decoration: none;
+}
+
+.gallery img {
+    height: 200px;
 }
