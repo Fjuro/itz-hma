@@ -177,3 +177,17 @@ main {
 .gallery img {
     height: 200px;
 }
+
+/* RESPONZIVITA */
+@media (max-width: 600px) {
+    .gallery {
+        text-align: center;
+    }
+    .gallery img {
+        height: auto;
+        width: 95%;
+    }
+    .gallery-header {
+        text-align: center;
+    }
+}
