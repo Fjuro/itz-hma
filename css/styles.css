@@ -1,13 +1,15 @@
 @import url('https://api.fonts.coollabs.io/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); /* Písma */
 
-body {
+* {
     margin: 0;
+}
+body {
     font-family: "Open Sans", sans-serif;
 }
 main {
     margin: 30px;
-    width: 100vw;
 }
+
 
 
 /*
@@ -16,12 +18,15 @@ main {
 
 .btn {
     padding: 7px;
+    border: none;
     background-color: #fc4e38;
     transition: .1s;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
+    text-align: center;
+    font-size: 16px;
 }
 .btn:hover {
     background-color: #fa6e5a;
@@ -49,9 +54,8 @@ main {
     .col {
         float: left;
         width: 50%;
-        padding: 10px;
     }
-    .row {
+    .row:after {
         content: "";
         display: table;
         clear: both;
@@ -124,7 +128,33 @@ main {
  * STAVBY
  */
 
+.content {
+    max-width: 1200px;
+    background-color: #fdf5f5;
+    border: #fc7f83 solid 2px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 7px 15px 15px;
+    transition: .3s;
+}
+.content:hover {
+    background-color: #fffdfd;
+    transition: .3s;
+}
+
 .content p {
     max-width: 560px;
     text-align: justify;
+}
+
+.content h2 {
+    padding-bottom: 10px;
+}
+
+.content .architect {
+    padding-bottom: 15px;
+}
+
+.content img {
+    width: 95%;
 }
