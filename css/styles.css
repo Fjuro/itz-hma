@@ -6,7 +6,6 @@ body {font-family: "Open Sans", sans-serif;}
 main {margin: 30px;}
 
 
-
 /*
  * ROZVRŽENÍ
  */
@@ -132,6 +131,24 @@ main {margin: 30px;}
 
 
 /*
+ * ZÁPATÍ
+ */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fa6e5a;
+    text-align: center;
+}
+
+footer p {
+    padding: 10px 0;
+}
+
+
+
+/*
  * DOMOVSKÁ STRÁNKA
  */
 
@@ -157,8 +174,8 @@ main {margin: 30px;}
     width: 80%;
 }
 
-.col-left {
-    height: 500px;
+.header-center {
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,7 +216,12 @@ main {margin: 30px;}
 
 .content .architect {padding-bottom: 15px;}
 
-.content img {width: 95%;}
+.content img {
+    width: 95%;
+    border-radius: 15px;
+}
+
+.main {margin: 30px;}
 
 
 

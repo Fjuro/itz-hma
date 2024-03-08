@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fontawesome.css">
     <link rel="stylesheet" href="css/lightgallery/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -26,7 +27,7 @@
 <!-- / NAVBAR -->
 
 <!-- MAIN -->
-<main>
+<div class="main" id="lightgallery">
 
     <h1>Stavby</h1>
 
@@ -44,7 +45,9 @@
     <div class="content row" id="medova-vila">
         <h2>Medova vila</h2>
         <div class="col">
-            <img src="img/obrazek.jpg" alt="Medova Vila"> <!-- obrázek je placeholder -->
+            <a href="img/obrazek.jpg">
+                <img src="img/obrazek.jpg" alt="Medova Vila"> <!-- obrázek je placeholder -->
+            </a>
         </div>
         <div class="col">
             <p class="architect">Architekt: <b>Josef Gočár</b></p>
@@ -55,7 +58,9 @@
     <div class="content row" id="vila-helenka">
         <h2>Vila Helenka</h2>
         <div class="col">
-            <img src="img/stavby/helenka.jpg" alt="Vila Helenka">
+            <a href="img/stavby/helenka.jpg">
+                <img src="img/stavby/helenka.jpg" alt="Vila Helenka">
+            </a>
         </div>
         <div class="col">
             <p class="architect">Architekt: <b>doplnit</b></p>
@@ -63,11 +68,22 @@
         </div>
     </div>
 
-</main>
+</div>
 <!-- / MAIN -->
 
 </body>
 <script src="js/scripts.js"></script>
 <script src="js/fontawesome.js"></script>
 <script src="js/lightgallery/bundle.js"></script>
+<script src="js/lightgallery/zoom.js"></script>
+<script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom],
+        speed: 500,
+        getCaptionFromTitleOrAlt: true,
+        download: true,
+        hideScrollbar: true,
+        mode: 'lg-slide'
+    });
+</script>
 </html>
