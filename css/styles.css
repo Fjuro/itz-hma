@@ -215,7 +215,7 @@ footer p {
 }
 
 @media (max-width: 600px) {
-    .index-header {height: 400px;}
+    .index-header {height: 420px;}
     .index-header img {display: none;}
     .index-header p {width: 65vw;}
 }
@@ -265,7 +265,7 @@ footer p {
         display: none;
     }
     .box {
-        height: 550px;
+        height: 100%;
         margin-bottom: 30px;
     }
 }
