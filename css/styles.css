@@ -14,6 +14,8 @@ main {margin: 30px;}
 /* BLOK */
 .block {display: block;}
 
+.h-100 {height: 100vh;}
+
 /* KONTEJNER */
 .container {
     position: relative;
