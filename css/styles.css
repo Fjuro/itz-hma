@@ -4,6 +4,7 @@
 * {margin: 0;}
 body {font-family: "Open Sans", sans-serif;}
 main {margin: 30px;}
+html {scroll-behavior: smooth;}
 
 
 /*
@@ -14,7 +15,11 @@ main {margin: 30px;}
 /* BLOK */
 .block {display: block;}
 
+/* HEIGHT 100 */
 .h-100 {height: 100vh;}
+
+/* ANCHOR */
+.anchor {scroll-margin-top: 50px;}
 
 /* KONTEJNER */
 .container {
@@ -198,7 +203,6 @@ footer p {
     width: 100%;
     border-radius: 20px;
     transition: .3s;
-    overflow: hidden;
 }
 .index-header img:hover {
     transition: .3s;
@@ -209,6 +213,13 @@ footer p {
     padding: 15px 0;
     width: 80%;
 }
+
+@media (max-width: 600px) {
+    .index-header {height: 400px;}
+    .index-header img {display: none;}
+    .index-header p {width: 65vw;}
+}
+
 
 .header-center {
     height: 400px;
@@ -233,17 +244,30 @@ footer p {
     padding-bottom: 10px;
 }
 
-.box-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .box-img img {
-    height: 300px;
-    margin: 50px 0 50px 20px;
     border-radius: 20px;
     object-fit: cover;
+}
+
+@media (min-width: 600px) {
+    .box-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-img img {
+        margin: 50px 0 50px 20px;
+        height: 300px;
+    }
+}
+@media (max-width: 600px) {
+    .box-img img {
+        display: none;
+    }
+    .box {
+        height: 550px;
+        margin-bottom: 30px;
+    }
 }
 
 
@@ -271,7 +295,15 @@ footer p {
     object-fit: cover;
 }
 
+@media (max-width: 600px) {
+    .index-btn-img {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
 /* Index Button Image Overlay */
+
 .index-btn-overlay {
     position: absolute;
     top: 0;
@@ -280,6 +312,7 @@ footer p {
     right: 0;
     height: 100%;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.26);
 }
 
 .index-btn-overlay .text {
@@ -290,12 +323,7 @@ footer p {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-}
-
-/* RESPONZIVITA */
-@media (max-width: 600px) {
-    .index-header img {display: none;}
-    .index-header p {width: 65vw;}
+    font-weight: bold;
 }
 
 
