@@ -132,18 +132,17 @@ html {scroll-behavior: smooth;}
     max-height: 46px;
 }
 .navbar a:hover {
-    text-decoration: underline;
+    font-weight: bold;
     background-color: #fa6e5a;
     transition: .1s;
 }
 .navbar .active {
     background-color: #fc6651;
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 .navbar .logo {
-    font-weight: 800;
-    text-decoration: none !important;
+    font-weight: 800 !important;
 }
 
 .navbar .menu-btn {display: none;}
